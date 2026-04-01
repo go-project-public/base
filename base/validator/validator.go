@@ -10,23 +10,13 @@ import (
 	zh_trans "github.com/go-playground/validator/v10/translations/zh"
 )
 
-var defaultConfig = &Config{}
-
-func init() {
-	c, err := New()
-	if err != nil {
-		panic(err)
-	}
-	defaultConfig = c
-}
-
-func New() (*Config, error) {
-	c := &Config{}
-	if err := c.Init(); err != nil {
-		return nil, err
-	}
-	return c, nil
-}
+// func init() {
+// 	c, err := New()
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	defaultConfig = c
+// }
 
 type Config struct {
 	v     *validator.Validate
@@ -74,8 +64,4 @@ func (m *Config) Validate(target any) error {
 	}
 
 	return nil
-}
-
-func Validate(target any) error {
-	return defaultConfig.Validate(target)
 }

@@ -1,4 +1,4 @@
-module github.com/go-project-public/validator
+module github.com/go-project-public/base/validator
 
 go 1.25.0
 

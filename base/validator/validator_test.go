@@ -3,7 +3,7 @@ package validator_test
 import (
 	"testing"
 
-	"github.com/go-project-public/validator"
+	"github.com/go-project-public/base/validator"
 )
 
 type TestValidate struct {
